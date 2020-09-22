@@ -3,10 +3,12 @@ body {
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+  position: relative;
 }
 
 button {
+  margin-top: 20px;
   cursor: pointer;
 }
 
@@ -33,8 +35,20 @@ a {
   line-height: 50px;
 }
 
+@supports (background-blend-mode: multiply) {
+  .header {
+    background: url(./images/dragon.jpg), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .header h1 {
   margin: 0px;
+  font-size: clamp(1rem, calc(2vw + 1rem), 2.5rem);
 }
 
 .header button {
@@ -57,8 +71,6 @@ a {
 .navbar .topnav {
   overflow: hidden;
   background-color: #333;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 .navbar .topnav a {
@@ -111,17 +123,23 @@ a {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .technologies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 25px;
 }
 
 .technologies .me {
   max-width: 500px;
-  background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +153,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
 }
 
 .technologies .me .avatar {
@@ -143,11 +160,99 @@ a {
 }
 
 .technologies .me .avatar img {
-  border-radius: 20px;
+  border-radius: 50%;
 }
 
 .technologies .me .mydescription {
   width: 80%;
   text-align: center;
+}
+
+.technologies .technos {
+  padding: 20px;
+  width: 600px;
+  background: -webkit-gradient(linear, left top, right top, from(#c31432), to(#240b36));
+  background: linear-gradient(to right, #c31432, #240b36);
+}
+
+.technologies .technos .container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.technologies .technos .container .lang {
+  width: 70%;
+  float: left;
+  color: white;
+  padding: 10px;
+}
+
+.technologies .technos .container .perc {
+  background-color: white;
+  float: right;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+.projects .bigTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.projects .projets {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.projects .projet {
+  margin: 10px auto;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: solid 1px;
+}
+
+.objectif .bigTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.objectif .objectives {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.objectif .objectif {
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: solid 1px;
+  -webkit-transition: height;
+  transition: height;
+}
+
+.objectif .objectif .cover {
+  width: 100%;
+  height: 0%;
+  background-color: #2b2a2a;
+  -webkit-transition: height;
+  transition: height;
+}
+
+.objectif .objectif .cover:hover {
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

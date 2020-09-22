@@ -2,9 +2,11 @@ body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+    position: relative;
 }
 button{
+    margin-top:20px;
     cursor: pointer;
 }
 a{
@@ -20,8 +22,17 @@ a{
     justify-content: center;
     align-items: center;
     line-height: 50px;
+    @supports (background-blend-mode:multiply){
+        background:url(./images/dragon.jpg),radial-gradient(#444,#111);
+        background-blend-mode: multiply;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+    }
     h1{
         margin: 0px;
+        font-size: clamp(1rem,calc(2vw + 1rem),2.5rem);
     }
     button{
         padding: 15px 20px;
@@ -38,14 +49,13 @@ a{
         }
       }
 }
+
 .navbar{
-    
     .topnav {
         overflow: hidden;
         background-color: #333;
-        position:sticky;
       }
-      
+
       .topnav a {
         float: left;
         display: block;
@@ -91,21 +101,25 @@ a{
         }
       }
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .technologies{
     display: flex;
     flex-wrap: wrap;
+    padding: 25px;
     .me{
         max-width: 500px;
-        background-color: #333;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
         .avatar{
             width: 300px;
             img{
-                border-radius: 20px;
+                border-radius: 50%;
             }
         }
         .mydescription{
@@ -114,5 +128,78 @@ a{
         }
         
     }
+    .technos{
+        padding:20px;
+        width: 600px;
+        background:linear-gradient(to right, #c31432, #240b36);
+        .container{
+            width: 100%;
+            margin: 20px auto;
+            padding: 10px;
+            .lang{
+                width: 70%;
+                float: left;
+                color: white;
+                padding: 10px;
+            }
+            .perc{
+                background-color: white;
+                float: right;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 10px;
+            }
+        }
+        
+    }
 
+}
+.projects{
+    .bigTitle{
+        width: 100%;
+        text-align: center;
+    }
+    .projets{
+        width:80%;
+        display: flex;
+        flex-wrap:wrap;
+        margin: 20px auto;
+    }
+    .projet{
+        margin: 10px auto;
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        border: solid 1px;
+    }
+}
+.objectif{
+    .bigTitle{
+        width: 100%;
+        text-align: center;
+    }
+    .objectives{
+        width:80%;
+        display: flex;
+        flex-wrap:wrap;
+        margin: 20px auto;
+    }
+    .objectif{
+        margin: 10px auto;
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border: solid 1px;
+        transition: height;
+        .cover{
+            width: 100%;
+            height: 0%;
+            background-color: rgb(43, 42, 42);
+            transition: height;
+            &:hover{
+                height: 100%;
+            }
+        }
+        
+    }
 }
