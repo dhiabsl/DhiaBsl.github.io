@@ -3,7 +3,6 @@ body{
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Merriweather Sans', sans-serif;
-    position: relative;
 }
 button{
     margin-top:20px;
@@ -102,7 +101,8 @@ a{
       }
 }
 .sticky {
-    position: fixed;
+    position: sticky;
+    z-index: 1;
     top: 0;
     width: 100%;
 }
@@ -160,18 +160,54 @@ a{
         text-align: center;
     }
     .projets{
-        width:80%;
+        width:100%;
         display: flex;
         flex-wrap:wrap;
         margin: 20px auto;
+        
     }
     .projet{
-        margin: 10px auto;
-        width: 300px;
-        height: 300px;
+        margin: 20px auto;
+        width: 600px;
+        height: 400px;
         background-color: white;
         border: solid 1px;
+        position: relative;
     }
+    .socials{
+        font-size: 30px;
+        span{
+            margin: 0px 10px;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    .overlay {
+        position: absolute; 
+        bottom: 0; 
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.9); /* Black see-through */
+        color: #f1f1f1; 
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .projet,.One:hover .overlay {
+        opacity: 1;
+      }
+      .projet,.Two:hover .overlay {
+        opacity: 1;
+      }
+      .projet,.Three:hover .overlay {
+        opacity: 1;
+      }
+      .projet,.Four:hover .overlay {
+        opacity: 1;
+      }
 }
 .objectif{
     .bigTitle{
