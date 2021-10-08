@@ -78,7 +78,7 @@ a{
       .topnav .icon {
         display: none;
       }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 1000px) {
         .topnav a {display: none;}
         .topnav a.icon {
           float: right;
@@ -86,7 +86,7 @@ a{
         }
       }
       
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 1000px) {
         .topnav.responsive {position: relative;}
         .topnav.responsive .icon {
           position: absolute;
@@ -116,6 +116,7 @@ a{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 10px auto;
         .avatar{
             width: 300px;
             img{
@@ -132,17 +133,19 @@ a{
         padding:20px;
         width: 600px;
         background:linear-gradient(to right, #c31432, #240b36);
+        margin: 10px auto;
         .container{
             width: 100%;
-            margin: 20px auto;
-            padding: 10px;
+            margin: 10px auto;
+            display: flex;
             .lang{
-                width: 70%;
+                width: 30%;
                 float: left;
                 color: white;
                 padding: 10px;
             }
             .perc{
+                width: 60%;
                 background-color: white;
                 float: right;
                 color: black;

@@ -96,7 +96,7 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .navbar .topnav a {
     display: none;
   }
@@ -106,7 +106,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .navbar .topnav.responsive {
     position: relative;
   }
@@ -154,6 +154,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px auto;
 }
 
 .technologies .me .avatar {
@@ -174,22 +175,26 @@ a {
   width: 600px;
   background: -webkit-gradient(linear, left top, right top, from(#c31432), to(#240b36));
   background: linear-gradient(to right, #c31432, #240b36);
+  margin: 10px auto;
 }
 
 .technologies .technos .container {
   width: 100%;
-  margin: 20px auto;
-  padding: 10px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .technologies .technos .container .lang {
-  width: 70%;
+  width: 30%;
   float: left;
   color: white;
   padding: 10px;
 }
 
 .technologies .technos .container .perc {
+  width: 60%;
   background-color: white;
   float: right;
   color: black;
